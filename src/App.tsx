@@ -10,6 +10,7 @@ type PokemonList = {
 }
 
 function App()  {
+    const [logo, setLogo] = useState('');
     const [isLoading, setLoading] = useState<boolean>(true);
     const [pokemons, setPokemons] = useState<Pokemon[]>([]);
     const [pagination, setPagination] = useState<Pagination>({} as Pagination);
@@ -46,9 +47,18 @@ function App()  {
         fetchList('https://pokeapi.co/api/v2/pokemon?offset=0&limit=20')
     },[])
 
+
+    useEffect( () => {
+        async function loadLogo(){
+            let importedIcon = await require('./assets/pokeact.svg');
+            setLogo(importedIcon.default);
+        }
+        loadLogo();
+    }, []);
+
     return (
         <>
-            <div className="content"><h1>Pokeact</h1></div>
+            <div className="content"><img src={logo} className="logo"/></div>
             <div className="content">
                 {pokemons.map((pokemon, index) => {
                     return  <PokemonCard key={index} pokemon={pokemon}/>
