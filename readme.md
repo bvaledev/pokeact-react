@@ -4,6 +4,8 @@ Listagem e Paginação de pokemon utilizando a Poke API.
 
 Aplicação de estudo sobre fundamentos do React.
 
+![pokeact](img.png)
+
 ## Como usar
 
 Clone o repositório
