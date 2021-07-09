@@ -1,3 +1,4 @@
+import PokemonTypes from '../pokemon_type';
 import './styles.scss';
 
 type PokemonType = {
@@ -24,12 +25,14 @@ const pokemon_front_img = 'https://raw.githubusercontent.com/PokeAPI/sprites/mas
 function PokemonCard({pokemon}: PokemonCardProps) {
   return (
     <div className="pokemon-card">
-        <img src={`${pokemon_front_img}${pokemon.id}.svg`} />
+
+        <img className="pokemon-img" src={`${pokemon_front_img}${pokemon.id}.svg`} />
+        
+        <ul className="types">
+            {pokemon.types.map((type) => ( <PokemonTypes  key={type.type.name} name={type.type.name} /> ))}
+        </ul>
 
         <div className="info">
-            <ul>
-                {pokemon.types.map((type) => ( <li key={type.type.name}><span>{type.type.name}</span></li>))}
-            </ul>
             <strong className="name">{pokemon.name}</strong>
         </div>
     </div>  

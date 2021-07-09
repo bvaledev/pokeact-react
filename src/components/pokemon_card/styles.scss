@@ -1,4 +1,13 @@
+ul.types{
+    display: flex;
+    list-style: none;
+    position: absolute;
+    top: 4px;
+    right:4px;
+}
+
 .pokemon-card{
+    position: relative;
     width: 20%;
     min-width: 200px;
     margin: 10px;
@@ -11,7 +20,7 @@
     border: 1px solid  rgb(225, 224, 226);
     background-color: rgb(252, 248, 255);
 
-    img {
+    img.pokemon-img {
         width:100%;
         max-width: 120px;
         max-height: 120px;
@@ -23,7 +32,7 @@
         background-color: rgb(237, 229, 243);
         cursor: pointer;
 
-        img {
+        img.pokemon-img {
             transform: scale(1.2);
         }
     }
@@ -36,21 +45,7 @@
         width: 100%;
         margin-top: 20px;
         
-        ul{
-            display: flex;
-            list-style: none;
-
-            li {
-                padding: 4px 8px;
-                border-radius: 4px;
-                background-color: rgb(205, 185, 221);
-                font: 14px 'Segoe UI', sans-serif;
-                & + li{
-                    margin-left:4px;   
-                }
-            }
-        }
-
+       
         .name {
             margin-top: 10px;
             font: 18px 'Segoe UI', sans-serif;

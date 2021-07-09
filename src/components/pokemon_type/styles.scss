@@ -1,0 +1,16 @@
+img.pokemon-type-icon {
+    width:100%;
+    max-width: 36px;
+    max-height: 36px;
+    transition: all 150ms ease-in;
+    border-radius: 24px;
+    background-color: rgb(255, 255, 255);
+    
+    &:hover {
+        border: 1px solid  rgb(163, 121, 206);
+        cursor: pointer;
+        transform: rotate(360deg) scale(1.2);
+        
+    }
+}
+
