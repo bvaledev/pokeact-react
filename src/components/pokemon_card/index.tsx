@@ -1,6 +1,3 @@
-import React from 'react';
-
-const pokemon_front_img = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/'
 import './styles.scss';
 
 type PokemonType = {
@@ -22,6 +19,8 @@ type PokemonCardProps = {
     pokemon: Pokemon;
 }
 
+const pokemon_front_img = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/'
+
 function PokemonCard({pokemon}: PokemonCardProps) {
   return (
     <div className="pokemon-card">
@@ -29,19 +28,12 @@ function PokemonCard({pokemon}: PokemonCardProps) {
 
         <div className="info">
             <ul>
-                {pokemon.types.map((type) => ( <li><span>{type.type.name}</span></li>))}
-                
+                {pokemon.types.map((type) => ( <li key={type.type.name}><span>{type.type.name}</span></li>))}
             </ul>
-            
             <strong className="name">{pokemon.name}</strong>
-
-            <div className="footer">
-                <span>Tamanho: {pokemon.weight}</span>
-                <span>Exp: {pokemon.base_experience}</span>
-            </div>
         </div>
-    </div>
-  );
+    </div>  
+);
 }
 
 export default PokemonCard;
