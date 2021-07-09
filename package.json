@@ -1,6 +1,6 @@
 {
   "name": "desafio-pessoal",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "scripts": {
     "dev": "webpack serve",
     "build": "cross-env NODE_ENV=production webpack"
