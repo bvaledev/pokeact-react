@@ -7,6 +7,7 @@ ul.types{
 }
 
 .pokemon-card{
+    overflow: hidden;
     position: relative;
     width: 20%;
     min-width: 200px;
@@ -20,11 +21,24 @@ ul.types{
     border: 1px solid  rgb(225, 224, 226);
     background-color: rgb(252, 248, 255);
 
+    img.pokeball-bg {
+        position:absolute;
+        z-index: 0;
+        width: 200px;
+        height: 200px;
+
+        opacity: 0.08;
+
+        bottom: -50px;
+        left: -50px;
+    }
+
     img.pokemon-img {
         width:100%;
         max-width: 120px;
         max-height: 120px;
-        transition: all 100ms ease-in
+        transition: all 100ms ease-in;
+        z-index: 0;
     }
 
     &:hover {
@@ -44,10 +58,9 @@ ul.types{
         align-items:center;
         width: 100%;
         margin-top: 20px;
+        z-index: 1;
         
-       
         .name {
-            margin-top: 10px;
             font: 18px 'Segoe UI', sans-serif;
             text-transform: capitalize;
             font-weight: bold; 

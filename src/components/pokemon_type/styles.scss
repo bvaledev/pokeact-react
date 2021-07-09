@@ -6,6 +6,7 @@ img.pokemon-type-icon {
     border-radius: 24px;
     background-color: rgb(255, 255, 255);
     
+    z-index: 3;
     &:hover {
         border: 1px solid  rgb(163, 121, 206);
         cursor: pointer;

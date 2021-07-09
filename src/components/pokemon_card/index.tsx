@@ -1,5 +1,6 @@
 import PokemonTypes from '../pokemon_type';
 import './styles.scss';
+  
 
 type PokemonType = {
     slot: number;
@@ -23,8 +24,13 @@ type PokemonCardProps = {
 const pokemon_front_img = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/'
 
 function PokemonCard({pokemon}: PokemonCardProps) {
+
+  const bg = require('../../assets/pokemon/pokeball.svg')
+
   return (
-    <div className="pokemon-card">
+    <div className="pokemon-card" >
+  
+        <img className="pokeball-bg" src={bg} />
 
         <img className="pokemon-img" src={`${pokemon_front_img}${pokemon.id}.svg`} />
         
