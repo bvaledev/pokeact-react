@@ -1,7 +1,5 @@
 import { render } from 'react-dom'
-
-function App(){
-    return <h1>Hello React</h1>
-}
+import App from './App'
+import './assets/global.scss'
 
 render(<App/>, document.getElementById('root'))

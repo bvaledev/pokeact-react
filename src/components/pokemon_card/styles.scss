@@ -1,0 +1,72 @@
+.pokemon-card{
+    width: 180px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid  rgb(225, 224, 226);
+    background-color: rgb(252, 248, 255);
+
+    &:hover {
+        border: 1px solid  rgb(163, 121, 206);
+        background-color: rgb(237, 229, 243);
+        cursor: pointer;
+    }
+
+    img {
+        width:100%;
+        max-width: 120px;
+        max-height: 120px;
+    }
+    
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        width: 100%;
+        margin-top: 20px;
+        
+        ul{
+            display: flex;
+            list-style: none;
+
+            li {
+                padding: 4px 8px;
+                border-radius: 4px;
+                background-color: rgb(205, 185, 221);
+                font: 14px 'Segoe UI', sans-serif;
+                & + li{
+                    margin-left:4px;   
+                }
+            }
+        }
+
+        .name {
+            margin-top: 10px;
+            font: 18px 'Segoe UI', sans-serif;
+            text-transform: capitalize;
+            font-weight: bold; 
+            color: rgb(68, 63, 80);
+        }
+
+        .footer {
+            display: flex;
+            margin-top: 5px;
+            span {
+                font: 12px 'Segoe UI', sans-serif;
+                text-transform: capitalize;
+                color: rgb(239, 237, 245);
+                background-color: rgb(80, 87, 83);
+                padding: 2px 4px;
+                border-radius: 8px;
+                & + span {
+                    margin-left:4px;   
+                }
+            }
+        }
+    }
+}
+
